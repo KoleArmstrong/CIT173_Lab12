@@ -1,0 +1,17 @@
+if (( $# != 2 )); then
+    echo "Fucking Nerd"
+    exit
+fi
+
+# $1 - user name
+# $2 - login name
+
+echo "DISPLAY NAME: " $1
+echo "USER ID: " $2
+
+#mkdir /home/$2
+#groupadd $2
+useradd $2
+chown $2 /home/$2
+chgrp $2 /home/$2
+
